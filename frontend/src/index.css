@@ -53,6 +53,15 @@
   transition: box-shadow 0.3s ease;
 }
 
+.book-preview button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .book-preview:hover {
   box-shadow: 1px 3px 5px rgba(41, 20, 156, 0.1);
 }
