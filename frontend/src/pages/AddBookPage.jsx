@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const AddBookPage = () => {
+
 const [title, setTitle] = useState("");
 const [author, setAuthor] = useState("");
 const [isbn, setIsbn] = useState("");
@@ -8,6 +11,9 @@ const [genre, setGenre] = useState("");
 const [isAvailable, setIsAvailable] = useState("true");
 const [dueDate, setDueDate] = useState("");
 const [borrower, setBorrower] = useState("");
+
+const navigate= useNavigate();
+
 const addBook = async (newBook) => {
   try {
     const res = await fetch("/api/books", {
@@ -37,6 +43,7 @@ const addBook = async (newBook) => {
     },
   };
   addBook(newBook);
+  navigate('/')
 
   };
   return (
