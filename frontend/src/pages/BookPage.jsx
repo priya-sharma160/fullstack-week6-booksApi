@@ -59,6 +59,7 @@ const onDeleteClick = (bookId) => {
     <p>Borrower: {book.availability.borrower || "—"}</p>
     <button onClick={() => navigate("/")}>Back</button>
     <button onClick={() => onDeleteClick(book._id)}>Delete</button>
+    <button onClick={() => navigate(`/edit-book/${book._id}`)}>Edit</button>
   </div>
 )}
       </>
